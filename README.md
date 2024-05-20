@@ -11,6 +11,7 @@ Layers: The CNN consists of multiple layers that process the image. Each layer e
 Encoder-Decoder Structure:
 Encoder: This part of the network compresses the black-and-white image into a simpler, lower-dimensional representation.
 Decoder: This part then takes this simplified representation and tries to reconstruct it as a color image.
+
 3. Training the CNN
 The CNN learns by looking at many pairs of black-and-white and color images. It tries to predict the colors for the black-and-white images. During training, the network compares its colorized output with the actual color image and adjusts itself to improve accuracy.
 
@@ -19,22 +20,17 @@ Colors are often predicted in a color space that separates brightness from color
 
 L (Lightness): This comes from the original black-and-white image.
 A and B (Color Components): These are predicted by the CNN.
+
 5. Combining the Results
 The predicted color components (A and B) are combined with the lightness (L) from the black-and-white image to create a fully colorized image.
 
 6. Refining the Image
 Sometimes, additional steps are taken to fine-tune the colors and fix any minor issues, making the final image look more natural and realistic.
 
-Applications
+7.Applications
 Historical Photos: Adding color to old black-and-white photographs.
 Art and Design: Helping artists add color to their sketches or designs.
 Medical Imaging: Enhancing black-and-white medical scans for better interpretation.
 Popular Techniques
 Generative Adversarial Networks (GANs): These networks create more realistic colors by using two networks that work together to improve the results.
 U-Net Architecture: This is a type of CNN with additional connections that help preserve details and improve the quality of the colorization.
-
-TOOLS AND EXAMPLE:-
-
-DeOldify: An open-source project that uses advanced techniques to colorize images and videos.
-ChromaGAN: A model that predicts colors more accurately by understanding the image content better.
-In summary, using CNNs for automatic image colorization involves training a network on many examples to learn how to add realistic colors to black-and-white images. This technology is useful for restoring old photos, aiding artists, and improving medical images.
